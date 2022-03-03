@@ -11,4 +11,4 @@ request_info:
     - name: récupération pull_request
       uses: action/checkout@v3
     - name: pull reponse
-      run: echo "Je fait des test et ensuite le build"
+      run: echo "Je fait des test et ensuite build"
