@@ -1,15 +1,14 @@
 name: pull_request
 
-on: pull_request
-
-Test:
+on: 
+  pull_request:
+    branche:
+     -main
+jobs:
+request_info:
   runs-on: ubuntu-latest
   steps:
-    - name: "test"
-      run: echo "je fais ds tests"
-Build:
-  needs: Test
-  runs-on: ubuntu-latest
-  steps:
-    - name: "build"
-      run: echo "je fais ds build"
+    - name: récupération pull_request
+      uses: action/checkout@v3
+    - name: pull reponse
+      run: echo "Je fait des test et ensuite le build"
