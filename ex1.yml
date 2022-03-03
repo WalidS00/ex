@@ -1,0 +1,15 @@
+name: pull_request
+
+on: pull_request
+
+Test:
+  runs-on: ubuntu-latest
+  steps:
+    - name: "test"
+      run: echo "je fais ds tests"
+Build:
+  needs: Test
+  runs-on: ubuntu-latest
+  steps:
+    - name: "build"
+      run: echo "je fais ds build"
