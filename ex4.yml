@@ -1,0 +1,29 @@
+name: Mon premier test
+# push
+# pall request
+# merge
+# pish sur la branch untel
+on: push
+# on déclare des processus de travail
+jobs:
+  # on donne un mon à notre job
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: message
+        run: echo "je fais ds tests1"
+      - name: message
+        run: echo "je fais ds tests2"
+      - name: message
+        run: echo "je fais ds tests3"
+
+  Build:
+    needs: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: message
+        run: echo "je fais ds build1"
+      - name: message
+        run: echo "je fais ds build2"
+      - name: message
+        run: echo "je fais ds build3"
